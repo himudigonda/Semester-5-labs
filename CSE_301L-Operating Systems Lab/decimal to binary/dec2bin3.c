@@ -1,3 +1,6 @@
+// @author: @ruhend (Mudigonda Himansh)
+// Decimal to binary using bitwise op.
+
 #include<stdio.h>
 
 int dec2bin(unsigned int num)
@@ -18,7 +21,7 @@ int main(){
 	int a[10], n,i;
 	n = 10;
 	dec2bin(n);
-	printf(" ");
+	printf("\n");
 	return 0;
 }
 
