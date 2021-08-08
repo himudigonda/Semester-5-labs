@@ -15,26 +15,41 @@
 # 9.    Write a script to calculate the sum of digits of the given number
 # 10.   Write a script to check whether the given string is a palindrome
 
-#! Question 1
-read -p "Enter the three numbers : " number1 number2 number3
+# #! Question 1
+# read -p "Enter the three numbers : " number1 number2 number3
 
-if [[ $number1 -gt $number2 && $number1 -gt $number3 ]]; then
-    echo "$number1 is the greatest number"
-fi
+# if [[ $number1 -gt $number2 && $number1 -gt $number3 ]]; then
+#     echo "$number1 is the greatest number"
+# fi
 
-if [[ $number2 -gt $number3 && $number2 -gt $number1 ]]; then
-    echo "$number2 is the greatest"
-fi
+# if [[ $number2 -gt $number3 && $number2 -gt $number1 ]]; then
+#     echo "$number2 is the greatest"
+# fi
 
-if [[ $number3 -gt $number1 && $number3 -gt $number2 ]]; then
-    echo "$number3 is the greatest"
-fi
+# if [[ $number3 -gt $number1 && $number3 -gt $number2 ]]; then
+#     echo "$number3 is the greatest"
+# fi
 
-#! Question 2
-read -p "Enter the number to find if a number is even/odd : " evenoddnumber
+# #! Question 2
+# read -p "Enter the number to find if a number is even/odd : " evenoddnumber
 
-if [[ $(expr $evenoddnumber % 2) == 0 ]]; then
-    echo "$evenoddnumber is an even number"
-else
-    echo "$evenoddnumber is an odd number"
-fi
+# if [[ $(expr $evenoddnumber % 2) == 0 ]]; then
+#     echo "$evenoddnumber is an even number"
+# else
+#     echo "$evenoddnumber is an odd number"
+# fi
+
+# #! Question 3
+# echo "Enter Size : "
+# read N
+# i=1
+# sum=0
+# echo "Enter Numbers : "
+# while [ $i -le $N ]; do
+#     read num
+#     sum=$((sum + num))
+#     i=$((i + 1))
+# done
+# avg=$(echo $sum / $N | bc -l)
+
+# echo $avg
