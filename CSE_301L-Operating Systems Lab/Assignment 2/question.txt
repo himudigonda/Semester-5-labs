@@ -1,0 +1,16 @@
+# ! /bin/bash
+# @author : @ruhend (Mudigonda Himansh)
+# Assignment 2
+
+# !  QUESTIONS
+# Write the shell script for each of these programs and submit the  word file with code, input and output ?
+# 1.  x   Write a script to find the greatest of three numbers (numbers passed as command line parameters)
+# 2.  x   Write a script to check whether the given no. is even/odd
+# 3.  x   Write a script to calculate the average of n numbers.
+# 4.  x   Write a script to check whether the given number is prime or not.
+# 5.  x   Write a script to check whether the given input is a number or a string.
+# 6.  x   Write a script to compute no. of characters and words in each line of given file.
+# 7.  x   Write a script to print the Fibonacci series upto n terms
+# 8.  x   Write a script to calculate the factorial of a given number
+# 9.  x   Write a script to calculate the sum of digits of the given number
+# 10. x  Write a script to check whether the given string is a palindrome
