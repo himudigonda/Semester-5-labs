@@ -10,7 +10,7 @@ val="$?"
 
 if [[ $val == 0 ]]; then
     echo "String"
-    break
+    exit
 fi
 
 echo "$numorstring" | grep "^[0-9]*$"
@@ -18,4 +18,5 @@ val="$?"
 
 if [[ $val == 0 ]]; then
     echo "Number"
+    exit
 fi
