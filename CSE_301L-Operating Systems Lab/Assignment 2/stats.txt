@@ -12,32 +12,3 @@ ros semper tempor. Sed porttitor imperdiet nisl, nec ornare metus lobortis eget.
 Aliquam sed ultricies massa. Sed scelerisque nec erat 
 eu fringilla. Ut vehicula tincidunt neque, sit amet volutpat ante vestibulum ac. 
 Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-
-Nunc nec turpis dui. Phasellus semper lorem sed ligula porttitor vestibulum. In et 
-gravida arcu. Aliquam ut euismod dolor. Nullam quis diam lacus. Pellentesque bibend
-um quam est, nec feugiat diam dapibus convallis. Pellentesque habitant morbi tristi
-que senectus et netus et malesuada fames ac turpis egestas. Ut dictum augue sit amet
- eros mattis, at aliquet erat maximus. Integer gravida scelerisque arcu nec pellente
-sque. Ut egestas sem at erat pretium, vitae tincidunt ante sagittis. Duis laoreet quam
- vel nibh iaculis, finibus hendrerit arcu 
-malesuada. Donec pretium tristique gravida. Fusce a
-c felis eget ex efficitur lobortis. Interdum et malesuada fames ac ante ipsum primi
-s in faucibus. Vestibulum magna metus, fermentum ac quam eu, vehicula mollis arcu.
-
-Interdum et malesuada fames ac ante ipsum primis in faucibus. In tincidunt ligula m
-i. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
- himenaeos. Nunc mattis, urna eget imperdiet volutpat, tortor arcu lobortis elit, i
-d fringilla ante elit at mi. Praesent est dolor, semper at orci eu, tempor finibus 
-lorem. Aenean dictum nunc vitae lacus efficitur, eu lobortis orci tincidunt. Praesen
-t tristique ante id orci tincidunt suscipit. Orci varius natoque penatibus et magnis 
-dis parturient montes, nascetur ridiculus mus. Curabitur et elit finibus, eleifend qu
-am rutrum, pretium nisl. In at velit id tortor sodales consequat. Pellentesque molest
-ie, libero et hendrerit ullamcorper, risus purus rutrum nulla, a molestie purus sem n
-ec neque. Mauris sit amet congue elit. Nullam ullamcorper ultricies pharetra. Etiam u
-ltrices pretium fermentum.
-
-Integer congue vel quam id dictum. Quisque a nunc tortor. Nam eu venenatis magna. Aen
-ean vestibulum nisl vel semper tempor. Praesent posuere lacus purus, ut commodo nibh 
-vehicula sit amet. Vestibulum ante ipsum primis in 
-faucibus orci luctus et ultrices posuere cubilia curae; Aliquam sit amet leo mattis 
-tortor consectetur laoreet. Nunc ullamcorper mollis urna id elementum.
