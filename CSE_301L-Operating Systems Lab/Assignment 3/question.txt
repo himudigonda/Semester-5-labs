@@ -13,11 +13,11 @@
 # 7.  x  Write a shell script to check the spellings of any text document given as an argument.
 # 8.  -  Write a shell script to encrypt any text file.
 # 9.     Combine the above commands in a shell script so that you have a small program for extracting a wordlist.
-# 10.    Write a shell script which reads the contents in a text file and removes all the blank spaces in them and redirects the output to a file.
+# 10. x  Write a shell script which reads the contents in a text file and removes all the blank spaces in them and redirects the output to a file.
 # 11.    Write a shell script that changes the name of the files passed as arguments to lowercase.
 # 12. x  Write a shell script to translate all the characters to lower case in a given text file.
 # 13. x  Write a shell script to combine any three text files into a single file (append them in the order as they appear in the arguments) and display the word count.
 # 14.    Write a shell script that, given a file name as the argument will write the even numbered line to a file with name evenfile and odd numbered lines to a file called oddfile.
 # 15.    Write a shell script which deletes all the even numbered lines in a text file.
-# 16.    Write a script called hello which outputs the following: • your username • the time and date • who is logged on • also output a line of asterices (*********) after each section.
+# 16. x  Write a script called hello which outputs the following: • your username • the time and date • who is logged on • also output a line of asterices (*********) after each section.
 # 17. x  Write a script that will count the number of files in each of your subdirectories.
