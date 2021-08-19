@@ -13,7 +13,7 @@ if [[ $val == 0 ]]; then
     exit
 fi
 
-echo "$numorstring" | grep "^[0-9]*$"
+echo "$numorstring" | grep "^[0-9]+$"
 val="$?"
 
 if [[ $val == 0 ]]; then
