@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+#! @author: @ruhend(Mudigonda Himansh)
 
 def crc(msg, div, code='000'):
     msg = msg + code  # Concatinating message and code
