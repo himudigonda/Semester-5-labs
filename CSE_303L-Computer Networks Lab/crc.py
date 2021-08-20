@@ -1,6 +1,15 @@
 #!/usr/bin/env python3
 #! @author: @ruhend(Mudigonda Himansh)
 
+'''
+    Here in this program i have used one function to do both the encoding and decoding part of it.
+    this works with the basic principle, of division.
+    while division the remainder is returned.
+    Encoding doesnt make use of it, but while decoding the remainder is == 0, if True, then it is not corrupted, else it is.
+    Time Complexity: O(n^2)
+'''
+
+
 def crc(msg, div, code):
     msg = msg + code  # Concatinating message and code
     msg = list(msg)  # Self explainatory
