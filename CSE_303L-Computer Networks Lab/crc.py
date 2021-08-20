@@ -1,27 +1,38 @@
 #!/usr/bin/env python3
 
 def crc(msg, div, code='000'):
-    msg = msg + code
-    msg = list(msg)
-    div = list(div)
-    print(msg,div)
+    msg = msg + code  # Concatinating message and code
+    msg = list(msg)  # Self explainatory
+    div = list(div)  # Self explainatory
+    # print(msg,div) # Self explainatory
+
     for i in range(len(msg)-len(code)):
         if msg[i] == '1':
             for j in range(len(div)):
-                msg[i+j] = str((int(msg[i+j])+int(div[j]))%2)
-                print(i,j, msg[i+j])
+                # Performing XOR logic using %2 to remove the need of intgrating remainder with the divisor again.
+                msg[i+j] = str((int(msg[i+j])+int(div[j])) % 2)
+                # print(i,j, msg[i+j])
     return ''.join(msg[-len(code):])
 
-print('Test 1 ---------------------------')
+
 # Use a divisor that simulates: x^3 + x + 1
 msg = '1010'
 div = '1011'
-
-print('Input message:', msg)
+print("Encode: ", msg, div)
+print('Message:', msg)
 print('Divisor:', div)
 code = crc(msg, div)
 print('Output code:', code)
-print('Success:', crc(msg, div, code) == '000')
+
+
+# FALSE
+code = '101'
+print("Decode: Testing with code = ", code)
+print('Corrupt:', crc(msg, div, code) != '000')
+# TRUE
+code = '011'
+print("Decode: Testing with code = ", code)
+print('Corrupt:', crc(msg, div, code) != '000')
 # # TEST 2 ####################################################################
 # print('Test 2 ---------------------------')
 # # Use a divisor that simulates: x^2 + 1
