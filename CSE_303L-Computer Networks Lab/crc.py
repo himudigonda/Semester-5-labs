@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 #! @author: @ruhend(Mudigonda Himansh)
 
-def crc(msg, div, code='000'):
+def crc(msg, div, code):
     msg = msg + code  # Concatinating message and code
     msg = list(msg)  # Self explainatory
     div = list(div)  # Self explainatory
@@ -17,23 +17,34 @@ def crc(msg, div, code='000'):
 
 
 # Use a divisor that simulates: x^3 + x + 1
-msg = '1010'
+msg = '0111'
 div = '1011'
 print("Encode: ", msg, div)
 print('Message:', msg)
 print('Divisor:', div)
-code = crc(msg, div)
+code = '0'*(len(div)-1)
+code = crc(msg, div, code)
 print('Output code:', code)
 
 
-# FALSE
+# FALSE 1010
 code = '101'
 print("Decode: Testing with code = ", code)
 print('Corrupt:', crc(msg, div, code) != '000')
-# TRUE
+# TRUE 1010
 code = '011'
 print("Decode: Testing with code = ", code)
 print('Corrupt:', crc(msg, div, code) != '000')
+
+# False 0111
+code = '001'
+print("Decode: Testing with code = ", code)
+print('Corrupt:', crc(msg, div, code) != '000')
+# TRUE 0111
+code = '010'
+print("Decode: Testing with code = ", code)
+print('Corrupt:', crc(msg, div, code) != '000')
+
 # # TEST 2 ####################################################################
 # print('Test 2 ---------------------------')
 # # Use a divisor that simulates: x^2 + 1
