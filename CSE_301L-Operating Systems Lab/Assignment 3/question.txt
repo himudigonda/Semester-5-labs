@@ -7,7 +7,7 @@
 # 1.  x  Write a script to check whether the given string is a palindrome
 # 2.  x  Write a shell script that accepts a string from the terminal and echo a suitable message if it doesn’t have at least 5 characters including the other symbols.
 # 3.  x  Write a shell script to echo the string length of the given string as argument.
-# 4.  -  Write a shell script that accepts two directory names as arguments and deletes those files in the first directory which are similarly named in the second directly. Note: Contents should also match inside the files.
+# 4.  x  Write a shell script that accepts two directory names as arguments and deletes those files in the first directory which are similarly named in the second directly. Note: Contents should also match inside the files.
 # 5.  x  Write a shell script to display the processes running on the system for every 30 seconds, but only for 3 times.
 # 6.  x  Write a shell script that displays the last modification time of any file.
 # 7.  x  Write a shell script to check the spellings of any text document given as an argument.
