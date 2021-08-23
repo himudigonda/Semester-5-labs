@@ -2,13 +2,11 @@
 # @author : @ruhend (Mudigonda Himansh)
 # Assignment 3
 
-cp alpha.txt gamma.txt
-
-file="gamma.txt"
+file="ans14.txt"
 counter=0
 
-odd="gammaodd.txt" # odd file name
-even="gammaeven.txt"
+odd="ans14odd.txt" # odd file name
+even="ans14even.txt"
 if [ ! -f $file ]; then
     echo "$file not a file!"
     exit 2
@@ -30,6 +28,3 @@ while read line; do
     ((counter++))
 done <$file
 
-# rename temp out file
-/bin/mv $odd oddfile.txt
-/bin/mv $even evenfile.txt

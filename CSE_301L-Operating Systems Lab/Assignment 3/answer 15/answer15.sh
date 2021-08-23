@@ -2,12 +2,10 @@
 # @author : @ruhend (Mudigonda Himansh)
 # Assignment 3
 
-cp alpha.txt beta.txt
-
-file="beta.txt"
+file="ans15.txt"
 counter=0
 
-out="betaodd.txt" # odd file name
+out="ans15odd.txt" # odd file name
 
 if [ ! -f $file ]; then
     echo "$file not a file!"
