@@ -2,7 +2,7 @@
 # @author : @ruhend (Mudigonda Himansh)
 # Assignment 3
 
-START=$HOME/Documents/
+START=/home/ruhend/Documents/Documents/SRM/
 
 # change your directory to command line if passed
 # otherwise use home directory
