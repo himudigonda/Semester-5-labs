@@ -1,0 +1,5 @@
+1. Write a shell script like a more command. It asks the user name, the name of the file on command prompt and displays only the 15 lines of the file at a time on the screen. Further, next 15 lines will be displayed only when the user presses the enter key / any other key.
+2. Write a shell script that counts English language articles (a, an, the) in a given text file.
+3. Write the shell script which will replace each occurrence of character c with the characters chr in a string s. It should also display the number of replacements.
+4. Write a shell program to concatenate to two strings given as input and display the resultant string along with its string length. Write a shell program to simulate a simple calculator.
+5. Write a shell program to count the following in a text file. • Number of vowels in a given text file. • Number of blank spaces. • Number of characters. • Number of symbols. • Number of lines
