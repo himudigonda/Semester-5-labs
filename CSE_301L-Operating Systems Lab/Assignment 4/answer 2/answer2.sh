@@ -4,9 +4,9 @@
 
 FILE="testFile2.txt"
 
-count_a=$(grep -o " a " $FILE | wc -l | sed 's/[a-zA-z. ]//g')
-count_an=$(grep -o " an " $FILE | wc -l | sed 's/[a-zA-z. ]//g')
-count_the=$(grep -o " the " $FILE | wc -l | sed 's/[a-zA-z. ]//g')
+count_a=$(grep -o " a " $FILE | wc -l )
+count_an=$(grep -o " an " $FILE | wc -l )
+count_the=$(grep -o " the " $FILE | wc -l )
 
 # sum=$(count_a+count_an+count_the)
 
