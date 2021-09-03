@@ -8,7 +8,6 @@ echo "Total Lines: $lines"
 
 while [ $line -le $lines ]
 do
-    echo "$line"
     sed "${line}q;d" $file
     line=$((line+1))
     if [[ $(( line % 15 )) == 1 ]]
