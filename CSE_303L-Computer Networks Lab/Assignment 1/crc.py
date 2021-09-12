@@ -25,6 +25,9 @@ def crc(msg, div, code):
     return ''.join(msg[-len(code):])
 
 
+
+
+
 # Use a divisor that simulates: x^3 + x + 1
 msg = '0111'
 div = '1011'
