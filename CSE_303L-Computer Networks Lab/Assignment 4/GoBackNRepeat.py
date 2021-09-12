@@ -3,38 +3,73 @@
 #! Assignment 4
 #! Go Back N Repeat
 
-''' [GoBackNRepeat]
-'''
+"""
+ [summary]
 
-import sys, select # Will be used to timeout transmissions
+Returns:
+    [type]: [description]
+"""
+
+import sys, select, string # Will be used to timeout transmissions
 
 
 def InputFunc():
-    dataStr = '1 2 3 4 5 6 7 8 9 0'
-    windowSize = 5
-    dataBits = dataStr.split()
+    dataStr = '1011010'
+    dataStr = " ".join(dataStr)
+    windowSize = 4
+    dataBits = [int(x) for x in dataStr.split()]
     Timeout = 5
     return windowSize, dataBits, Timeout
 
-def send(dataSent, index):
+def send(dataSent, index,windowSize):
     print("Data Sent  : ", dataSent)
-    print("Data Index : ", index)
+    indexArray = list()
+    count = 0
+    while count<len(dataSent):
+        indexArray.append(index)
+        index += 1
+        count += 1
+    print("Data Index : ", indexArray)
+
+def calcComp(i,windowSize):
+    comp = ''
+    for j in range(windowSize):
+        comp += ' '+str(i)
+        i += 1 
+    comp = comp.strip()
+    return comp
 
 def GBN(windowSize, DataBits, Timeout):
     lenDataBits = len (DataBits)
-    statusFlag = False
     i = 0
-    while statusFlag==False:
-        send(DataBits[i], i)
+    lenToSend =lenDataBits-windowSize
+    rem = lenToSend%windowSize
+    q = lenToSend//windowSize
+    while i <=rem+q*windowSize:
+        send(DataBits[i:i+windowSize], i,windowSize)
+        comp = calcComp(i,windowSize)
+        print(">",comp)
         a, o, e = select.select( [sys.stdin], [], [], Timeout )
         if (a):
-            comp = "ack "+str(i)
             if sys.stdin.readline().strip() == comp:
-                # statusFlag = True
-                if (i == lenDataBits):
-                    statusFlag = True
-                print("Hi")
-        i = i+1
+                i+=windowSize
+            else:       
+                print(" - Ack Error")
+        else:
+            print(" - Timeout Error")
+    print(i,lenDataBits)
+    while i <= lenDataBits:
+        send(DataBits[-rem:], i,windowSize)
+        comp = calcComp(i,rem)
+        print(">",comp)
+        a, o, e = select.select( [sys.stdin], [], [], Timeout )
+        if (a):
+            if sys.stdin.readline().strip() == comp:
+                i+=windowSize
+            else:       
+                print(" - Ack Error")
+        else:
+            print(" - Timeout Error")
 
 def main():
     windowSize, dataBits, Timeout = InputFunc()
