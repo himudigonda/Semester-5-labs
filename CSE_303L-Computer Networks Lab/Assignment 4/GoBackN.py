@@ -12,7 +12,8 @@ Returns:
 
 import sys
 import select    # Will be used to timeout transmissions
-import string  
+import string
+
 
 def InputFunc():
     dataStr = '1010010011'
@@ -34,13 +35,13 @@ def GBN(windowSize, DataBits, Timeout):
     currentWindow = list()
     for i in range(windowSize):
         currentWindow.append(DataBits[i])
-        #^ print("appended", DataBits[i])
+        # ^ print("appended", DataBits[i])
     i += 1
     while i <= len(DataBits)+windowSize:
-        #^ print(i)
+        # ^ print(i)
         if len(currentWindow) <= windowSize:
             if currentWindow != []:
-                print(currentWindow)    
+                print(currentWindow)
                 a, o, e = select.select([sys.stdin], [], [], Timeout)
                 if (a):
                     ack = sys.stdin.readline().strip()
@@ -57,10 +58,13 @@ def GBN(windowSize, DataBits, Timeout):
             else:
                 print("**** End of Transmission ****")
                 break
+
+
 def main():
     print("**** Start of Transmission ****")
     windowSize, dataBits, Timeout = InputFunc()
     GBN(windowSize, dataBits, Timeout)
+
 
 if __name__ == '__main__':
     main()
