@@ -11,12 +11,11 @@ Returns:
 """
 
 import sys
-import select
-import string  # Will be used to timeout transmissions
-
+import select    # Will be used to timeout transmissions
+import string  
 
 def InputFunc():
-    dataStr = '123456789987654321'
+    dataStr = '1010010011'
     dataStr = " ".join(dataStr)
     windowSize = 4
     dataBits = [int(x) for x in dataStr.split()]
@@ -35,40 +34,33 @@ def GBN(windowSize, DataBits, Timeout):
     currentWindow = list()
     for i in range(windowSize):
         currentWindow.append(DataBits[i])
-        print("appended", DataBits[i])
+        #^ print("appended", DataBits[i])
     i += 1
     while i <= len(DataBits)+windowSize:
-        print(i)
+        #^ print(i)
         if len(currentWindow) <= windowSize:
-            print(currentWindow)
-            a, o, e = select.select([sys.stdin], [], [], Timeout)
-            if (a):
-                ack = sys.stdin.readline().strip()
-                if ack == str(i-windowSize):
-                    print(" + Ack Received!")
-                    if currentWindow != []:
+            if currentWindow != []:
+                print(currentWindow)    
+                a, o, e = select.select([sys.stdin], [], [], Timeout)
+                if (a):
+                    ack = sys.stdin.readline().strip()
+                    if ack == str(i-windowSize):
+                        print(" + Ack Received!")
                         currentWindow.pop(0)
                         if i < len(DataBits):
                             currentWindow.append(DataBits[i])
                         i += 1
                     else:
-                        print("****End of Transmission****")
-                        break
+                        print(" - Ack Error... Sending window elements again...")
                 else:
-                    print(" - Ack Error")
-                    # print("Expected", str(i-windowSize))
-                    # print("Received", str(ack))
+                    print(" - Timeout Error")
             else:
-                print(" - Timeout Error")
-    # print(currentWindow)
-    # currentWindow.pop()
-    # print(currentWindow)
-
-
+                print("**** End of Transmission ****")
+                break
 def main():
+    print("**** Start of Transmission ****")
     windowSize, dataBits, Timeout = InputFunc()
     GBN(windowSize, dataBits, Timeout)
-
 
 if __name__ == '__main__':
     main()
