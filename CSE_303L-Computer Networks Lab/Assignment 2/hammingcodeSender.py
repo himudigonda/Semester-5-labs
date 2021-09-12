@@ -24,45 +24,15 @@ def posRedundantBits(data, r):
             j += 1
         else:
             res = res + data[-1 * k]
+            # 1011001 
+            # 101'0'10'0'01'0''0'
+            # 
+            # 
             k += 1
     # The result is reversed since positions are
     # counted backwards. (m + r+1 ... 1)
     return res[::-1]
 
-
-def calcParityBits(arr, r):
-    n = len(arr)
-    # For finding rth parity bit, iterate over
-    # 0 to r - 1
-    for i in range(r):
-        val = 0
-        for j in range(1, n + 1):
-            # If position has 1 in ith significant
-            # position then Bitwise OR the array value
-            # to find parity bit value.
-            if(j & (2**i) == (2**i)):
-                val = val ^ int(arr[-1 * j])
-                # -1 * j is given since array is reversed
-        # String Concatenation
-        # (0 to n - 2^r) + parity bit + (n - 2^r + 1 to n)
-        arr = arr[:n-(2**i)] + str(val) + arr[n-(2**i)+1:]
-    return arr
-
-
-def detectError(arr, nr):
-    n   = len(arr)
-    res = 0
-    # Calculate parity bits again
-    for i in range(nr):
-        val = 0
-        for j in range(1, n + 1):
-            if(j & (2**i) == (2**i)):
-                val = val ^ int(arr[-1 * j])
-        # Create a binary no by appending
-        # parity bits together.
-        res = res + val*(10**i)
-    # Convert binary to decimal
-    return int(str(res), 2)
 
 
 def main():
