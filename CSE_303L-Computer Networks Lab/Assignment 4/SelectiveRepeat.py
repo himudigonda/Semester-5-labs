@@ -4,10 +4,7 @@
 #! Selective Repeat
 
 """
- [summary]
-
-Returns:
-    [type]: [description]
+[Selective Repeat]
 """
 
 import sys
