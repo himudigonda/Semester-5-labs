@@ -19,7 +19,7 @@
 
 def _input():
     # n is ipaddress[-1]
-    ipaddress = [190, 100, 0, 0]  # 198.169.x.x
+    ipaddress = [210, 146, 194, 0]  # 198.169.x.x
     no_of_hosts = 256
     no_of_subnets = 64
     return ipaddress, no_of_hosts, no_of_subnets
@@ -73,7 +73,7 @@ def Divide_Subnets_Hosts():
 
 def main():
     Class_Type()
-    Divide_Subnets_Hosts()
+#    Divide_Subnets_Hosts()
 
 
 main()
